@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/moral/Desktop/4to Semestre/Multimedios y Graficas Computacionales/Ray_Tracer_0.8/src</OriginalElement>
+  <nodes>
+    <node x="1154.9913037525287" y="176.3302447920472">edu.up.isgc.cg.raytracer.objects.IIntersectable</node>
+    <node x="474.84493390050557" y="46.945725945989096">edu.up.isgc.cg.raytracer.objects.Triangle</node>
+    <node x="806.0979364854696" y="177.48114729088863">edu.up.isgc.cg.raytracer.objects.Sphere</node>
+    <node x="256.1836015258448" y="721.6422722339438">edu.up.isgc.cg.raytracer.lights.PointLight</node>
+    <node x="1053.5667218459096" y="718.1013023679765">edu.up.isgc.cg.raytracer.lights.DirectionalLight</node>
+    <node x="1442.0328300584292" y="713.2267654676261">edu.up.isgc.cg.raytracer.ColorRGB</node>
+    <node x="-91.67840854906183" y="921.9856621557855">edu.up.isgc.cg.raytracer.math.Barycentric</node>
+    <node x="1516.505400685462" y="366.29500854351625">edu.up.isgc.cg.raytracer.RenderController</node>
+    <node x="1930.6656531989074" y="439.74538605684506">edu.up.isgc.cg.raytracer.math.Intersection</node>
+    <node x="1709.2603642840259" y="789.0139851366878">edu.up.isgc.cg.raytracer.math.Vector3D</node>
+    <node x="236.53103247562592" y="509.2927156383862">edu.up.isgc.cg.raytracer.cameras.PerspertiveCamera</node>
+    <node x="570.9208472384893" y="729.9012325987273">edu.up.isgc.cg.raytracer.lights.Light</node>
+    <node x="422.702495964111" y="965.5782962835178">edu.up.isgc.cg.raytracer.Raytracer</node>
+    <node x="766.99147631711" y="1083.296098622387">edu.up.isgc.cg.raytracer.Scene</node>
+    <node x="313.3964153141632" y="322.3808310242409">edu.up.isgc.cg.raytracer.objects.Model3D</node>
+    <node x="895.0965146958677" y="-14.866331671138994">edu.up.isgc.cg.raytracer.objects.Object3D</node>
+    <node x="1380.2198391106426" y="970.0586113741901">edu.up.isgc.cg.raytracer.math.Ray</node>
+    <node x="888.9047703204687" y="912.6606161033787">edu.up.isgc.cg.raytracer.tools.OBJReader</node>
+    <node x="1112.6332134922438" y="353.1409782608757">edu.up.isgc.cg.raytracer.objects.Plane</node>
+    <node x="1071.1110342122672" y="557.1851067921609">edu.up.isgc.cg.raytracer.cameras.OrthographicCamera</node>
+    <node x="683.0759973051015" y="404.01108441689826">edu.up.isgc.cg.raytracer.cameras.Camera</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="edu.up.isgc.cg.raytracer.objects.Sphere" target="edu.up.isgc.cg.raytracer.objects.Object3D" relationship="GENERALIZATION">
+      <point x="-113.99993648546968" y="-1.4729088863418838E-4" />
+      <point x="774.0" y="228.481" />
+      <point x="774.0" y="35.134" />
+      <point x="-98.49951469586767" y="3.316711389942384E-4" />
+    </edge>
+    <edge source="edu.up.isgc.cg.raytracer.objects.Triangle" target="edu.up.isgc.cg.raytracer.objects.IIntersectable" relationship="REALIZATION">
+      <point x="37.155066099494434" y="73.0002740540109" />
+      <point x="645.5" y="323.0" />
+      <point x="1124.0" y="323.0" />
+      <point x="1124.0" y="203.33" />
+      <point x="-111.00030375252868" y="-2.4479204719796144E-4" />
+    </edge>
+    <edge source="edu.up.isgc.cg.raytracer.objects.Plane" target="edu.up.isgc.cg.raytracer.objects.Object3D" relationship="GENERALIZATION">
+      <point x="-111.0002134922438" y="-10.640978260875727" />
+      <point x="774.0" y="381.5" />
+      <point x="774.0" y="35.134" />
+      <point x="-98.49951469586767" y="3.316711389942384E-4" />
+    </edge>
+    <edge source="edu.up.isgc.cg.raytracer.cameras.OrthographicCamera" target="edu.up.isgc.cg.raytracer.cameras.Camera" relationship="GENERALIZATION">
+      <point x="-192.5000342122671" y="-9.674106792160956" />
+      <point x="1028.576" y="586.511" />
+      <point x="1028.576" y="618.0" />
+      <point x="847.076" y="618.0" />
+      <point x="2.6948985123453895E-6" y="94.99991558310171" />
+    </edge>
+    <edge source="edu.up.isgc.cg.raytracer.objects.Object3D" target="edu.up.isgc.cg.raytracer.objects.IIntersectable" relationship="REALIZATION">
+      <point x="98.50048530413233" y="3.316711389942384E-4" />
+      <point x="1124.0" y="35.134" />
+      <point x="1124.0" y="203.33000000000004" />
+      <point x="-111.00030375252868" y="-2.4479204719796144E-4" />
+    </edge>
+    <edge source="edu.up.isgc.cg.raytracer.objects.Model3D" target="edu.up.isgc.cg.raytracer.objects.Object3D" relationship="GENERALIZATION">
+      <point x="154.49958468583674" y="1.6897575909524676E-4" />
+      <point x="774.0" y="373.381" />
+      <point x="774.0" y="35.134" />
+      <point x="-98.49951469586767" y="3.316711389942384E-4" />
+    </edge>
+    <edge source="edu.up.isgc.cg.raytracer.cameras.PerspertiveCamera" target="edu.up.isgc.cg.raytracer.cameras.Camera" relationship="GENERALIZATION">
+      <point x="192.99996752437403" y="2.8436161380795966E-4" />
+      <point x="665.576" y="560.293" />
+      <point x="665.576" y="618.0" />
+      <point x="847.076" y="618.0" />
+      <point x="2.6948985123453895E-6" y="94.99991558310171" />
+    </edge>
+    <edge source="edu.up.isgc.cg.raytracer.lights.DirectionalLight" target="edu.up.isgc.cg.raytracer.lights.Light" relationship="GENERALIZATION">
+      <point x="2.7815409043796535E-4" y="61.999697632023526" />
+      <point x="1191.567" y="893.401" />
+      <point x="536.0" y="893.401" />
+      <point x="536.0" y="802.901" />
+      <point x="-113.99984723848922" y="-2.3259872739345155E-4" />
+    </edge>
+    <edge source="edu.up.isgc.cg.raytracer.objects.Plane" target="edu.up.isgc.cg.raytracer.objects.IIntersectable" relationship="REALIZATION">
+      <point x="-2.1349224380173837E-4" y="-38.99997826087571" />
+      <point x="1223.633" y="323.0" />
+      <point x="1124.0" y="323.0" />
+      <point x="1124.0" y="203.33" />
+      <point x="-111.00030375252868" y="-2.4479204719796144E-4" />
+    </edge>
+    <edge source="edu.up.isgc.cg.raytracer.lights.PointLight" target="edu.up.isgc.cg.raytracer.lights.Light" relationship="GENERALIZATION">
+      <point x="122.00039847415525" y="-2.7223394374686904E-4" />
+      <point x="536.0" y="783.642" />
+      <point x="536.0" y="802.901" />
+      <point x="-113.99984723848922" y="-2.3259872739345155E-4" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.47048832271762203" showDependencies="false" x="1085.5" y="639.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
