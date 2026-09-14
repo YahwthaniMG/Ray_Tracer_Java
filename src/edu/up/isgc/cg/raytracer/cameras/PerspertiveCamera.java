@@ -7,6 +7,8 @@ import static java.lang.Math.*;
 
 /**
  * The type Perspertive camera.
+ *
+ * @author Claude (Anthropic)
  */
 public class PerspertiveCamera  extends Camera{
 
@@ -28,11 +30,23 @@ public class PerspertiveCamera  extends Camera{
          setVerticalFovRadians(toRadians(verticalFovRadians));
     }
 
-    private double getVerticalFovRadians(){
+    /**
+     * Gets the vertical field of view, in radians (public so scene save/load can
+     * persist it — see {@link edu.up.isgc.cg.raytracer.tools.SceneIO}).
+     *
+     * @return the vertical fov radians
+     */
+    public double getVerticalFovRadians(){
         return verticalFovRadians;
     }
 
-    private void setVerticalFovRadians (double verticalFovRadians){
+    /**
+     * Sets the vertical field of view, in radians (public so the Inspector can edit it
+     * live — see {@link edu.up.isgc.cg.raytracer.tools.SceneProperties}).
+     *
+     * @param verticalFovRadians the vertical fov radians
+     */
+    public void setVerticalFovRadians (double verticalFovRadians){
         this.verticalFovRadians=verticalFovRadians;
     }
 

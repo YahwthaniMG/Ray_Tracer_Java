@@ -1,0 +1,221 @@
+{
+  "projectName": "Untitled Scene",
+  "objects": [
+    {
+      "name": "Plane",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color": [
+        0,
+        153,
+        0
+      ],
+      "type": "Plane",
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": {
+        "ambient": 0.3,
+        "diffuse": 0.1,
+        "specular": 1.4,
+        "shininess": 120.0,
+        "reflectivity": 0.0,
+        "transparency": 0.0,
+        "refractiveIndex": 1.5
+      }
+    },
+    {
+      "name": "Model3D",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color": [
+        255,
+        204,
+        0
+      ],
+      "type": "Model3D",
+      "source": "primitive:pyramid",
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 5.0,
+      "material": {
+        "ambient": 0.3,
+        "diffuse": 0.1,
+        "specular": 1.4,
+        "shininess": 120.0,
+        "reflectivity": 0.0,
+        "transparency": 0.0,
+        "refractiveIndex": 1.5
+      }
+    },
+    {
+      "name": "Plane",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color": [
+        0,
+        153,
+        0
+      ],
+      "type": "Plane",
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": {
+        "ambient": 0.3,
+        "diffuse": 0.1,
+        "specular": 1.4,
+        "shininess": 120.0,
+        "reflectivity": 0.0,
+        "transparency": 0.0,
+        "refractiveIndex": 1.5
+      }
+    },
+    {
+      "name": "Plane",
+      "position": [
+        0.0,
+        10.0,
+        10.0
+      ],
+      "color": [
+        102,
+        0,
+        204
+      ],
+      "type": "Plane",
+      "rotation": [
+        1.5707963267948966,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": {
+        "ambient": 0.3,
+        "diffuse": 0.1,
+        "specular": 1.4,
+        "shininess": 120.0,
+        "reflectivity": 0.0,
+        "transparency": 0.0,
+        "refractiveIndex": 1.5
+      }
+    },
+    {
+      "name": "Plane",
+      "position": [
+        -10.0,
+        10.0,
+        0.0
+      ],
+      "color": [
+        255,
+        0,
+        255
+      ],
+      "type": "Plane",
+      "rotation": [
+        1.5707963267948966,
+        0.0,
+        1.5707963267948966
+      ],
+      "scale": 1.0,
+      "material": {
+        "ambient": 0.3,
+        "diffuse": 0.1,
+        "specular": 1.4,
+        "shininess": 120.0,
+        "reflectivity": 0.0,
+        "transparency": 0.0,
+        "refractiveIndex": 1.5
+      }
+    },
+    {
+      "name": "Plane",
+      "position": [
+        0.0,
+        20.0,
+        0.0
+      ],
+      "color": [
+        255,
+        255,
+        51
+      ],
+      "type": "Plane",
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": {
+        "ambient": 0.3,
+        "diffuse": 0.1,
+        "specular": 1.4,
+        "shininess": 120.0,
+        "reflectivity": 0.0,
+        "transparency": 0.0,
+        "refractiveIndex": 1.5
+      }
+    }
+  ],
+  "cameras": [
+    {
+      "name": "PerspertiveCamera",
+      "position": [
+        15.0,
+        15.0,
+        -15.0
+      ],
+      "yawDegrees": -45.0,
+      "pitchDegrees": 29.999999999999996,
+      "nearPlane": 0.1,
+      "farPlane": 400.0,
+      "type": "Perspective",
+      "fovDegrees": 59.99999999999999
+    }
+  ],
+  "lights": [
+    {
+      "name": "SpotLight",
+      "color": [
+        255,
+        255,
+        255
+      ],
+      "intensity": 6.0,
+      "type": "Spot",
+      "position": [
+        0.0,
+        10.0,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        6.123233995736766E-17
+      ],
+      "coneAngleDegrees": 30.0,
+      "penumbraDegrees": 7.5
+    }
+  ],
+  "activeCameraIndex": 0
+}

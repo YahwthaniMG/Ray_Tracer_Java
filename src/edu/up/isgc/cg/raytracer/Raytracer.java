@@ -23,7 +23,7 @@ import javax.swing.JOptionPane;
 /**
  * The type Raytracer.
  *
- * @author Jafet Rodríguez and Yahwthani Morales
+ * @author Jafet Rodríguez and Yahwthani Morales, with Claude (Anthropic)
  */
 public class Raytracer {
 
@@ -33,7 +33,7 @@ public class Raytracer {
      * @param args the input arguments
      */
     public static void main(String[] args) {
-        int OP=2;
+        RenderMode mode = RenderMode.NONE;
         int Res=100;
         String aspRat=(JOptionPane.showInputDialog(null,"Select an aspect ratio:","AspectRatio",
                 JOptionPane.PLAIN_MESSAGE,null,new Object[]{"Select","16/9", "16/10", "1/2", "1/1", "3/4","6/9"},
@@ -45,9 +45,9 @@ public class Raytracer {
                 JOptionPane.PLAIN_MESSAGE,null,new Object[]{"None","Reflection","Refraction"},
                 "None")).toString();
         if(Refle_Refra=="Reflection"){
-            OP=0;
+            mode = RenderMode.REFLECTION;
         } else if (Refle_Refra=="Refraction") {
-            OP=1;
+            mode = RenderMode.REFRACTION;
         }
         String Resolution=(JOptionPane.showInputDialog(null,"Select a resolution:","Resulution",
                 JOptionPane.PLAIN_MESSAGE,null,new Object[]{"100","200","300","400","500","600","700"
@@ -57,27 +57,28 @@ public class Raytracer {
         System.out.println(LocalDateTime.now());
         BufferedImage image;
 
+        // Escena de prueba rapida (baja carga) para validar el pipeline en VS Code.
+        image = RenderController.render(getTestScene(), Res, w / h, mode);
+        saveImage(image, "Test01.png");
+
         /*
-        image = RenderController.render(getTestPROScene(), Res, w / h, OP);
+        image = RenderController.render(getTestPROScene(), Res, w / h, mode);
         saveImage(image, "TestPRO_02.png");
-        image = RenderController.render(getTestRAPScene(), Res, w / h, OP);
+        image = RenderController.render(getTestRAPScene(), Res, w / h, mode);
         saveImage(image, "TestRAP.png");
 
-        image = RenderController.render(getFirstScene(), Res, w / h, OP);
+        image = RenderController.render(getFirstScene(), Res, w / h, mode);
         saveImage(image, "YahwthaniMorales_Render01.png");
-        image = RenderController.render(getSecondScene(), Res, w / h, OP);
+        image = RenderController.render(getSecondScene(), Res, w / h, mode);
         saveImage(image, "YahwthaniMorales_Render02.png");
-        image = RenderController.render(getThirdScene(), Res, w / h, OP);
+        image = RenderController.render(getThirdScene(), Res, w / h, mode);
         saveImage(image, "YahwthaniMorales_Render03.png");
-        image = RenderController.render(getFourthScene(), Res, w / h, OP);
+        image = RenderController.render(getFourthScene(), Res, w / h, mode);
         saveImage(image, "YahwthaniMorales_Render04.png");
-        image = RenderController.render(getFifthScene(), Res, w / h, OP);
+        image = RenderController.render(getFifthScene(), Res, w / h, mode);
         saveImage(image, "YahwthaniMorales_Render05.png");
-        image = RenderController.render(getSixthScene(), Res, w / h, OP);
+        image = RenderController.render(getSixthScene(), Res, w / h, mode);
         saveImage(image, "YahwthaniMorales_Render06.png");
-
-        //image = RenderController.render(getTestScene(), Res, w / h, OP);
-        //saveImage(image, "Test01.png");
         */
 
         System.out.println(LocalDateTime.now());

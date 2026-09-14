@@ -14,7 +14,7 @@ import java.awt.*;
 /**
  * The type Camera.
  *
- * @author Jafet Rodríguez
+ * @author Jafet RodrÃ­guez, with Claude (Anthropic)
  */
 public abstract class Camera{
     private Vector3D position;
@@ -22,6 +22,7 @@ public abstract class Camera{
     private double pitchRadians;
     private double nearPlane;
     private double farPlane;
+    private String name;
 
     /**
      * Instantiates a new Camera.
@@ -39,9 +40,33 @@ public abstract class Camera{
         setPitchRadians(pitchRadians);
         setNearPlane(nearPlane);
         setFarPlane(farPlane);
+        setName(getClass().getSimpleName());
     }
 
-    private void setPosition(Vector3D position){this.position= position;}
+    /**
+     * Gets the display name used by the scene editor (defaults to the simple class name).
+     *
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Sets the display name used by the scene editor.
+     *
+     * @param name the name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Sets position.
+     *
+     * @param position the position
+     */
+    public void setPosition(Vector3D position){this.position= position;}
 
     /**
      * Get position vector 3 d.
@@ -50,7 +75,12 @@ public abstract class Camera{
      */
     public Vector3D getPosition(){return position;}
 
-    private void setYawRadians(double yawRadians){
+    /**
+     * Sets yaw, in radians.
+     *
+     * @param yawRadians the yaw radians
+     */
+    public void setYawRadians(double yawRadians){
         this.yawRadians=yawRadians;
     }
 
@@ -63,7 +93,12 @@ public abstract class Camera{
         return yawRadians;
     }
 
-    private void setPitchRadians(double pitchRadians){
+    /**
+     * Sets pitch, in radians.
+     *
+     * @param pitchRadians the pitch radians
+     */
+    public void setPitchRadians(double pitchRadians){
         this.pitchRadians=pitchRadians;
     }
 
@@ -76,7 +111,12 @@ public abstract class Camera{
         return pitchRadians;
     }
 
-    private void setNearPlane(double nearPlane) {
+    /**
+     * Sets near plane.
+     *
+     * @param nearPlane the near plane
+     */
+    public void setNearPlane(double nearPlane) {
         this.nearPlane=nearPlane;
     }
 

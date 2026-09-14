@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Editor UI (new)",
+            "request": "launch",
+            "mainClass": "edu.up.isgc.cg.raytracer.ui.RayTracerApp",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "Raytracer (legacy batch render)",
+            "request": "launch",
+            "mainClass": "edu.up.isgc.cg.raytracer.Raytracer",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        }
+    ]
+}

@@ -11,11 +11,13 @@ import java.awt.*;
 /**
  * The type Object 3 d.
  *
- * @author Jafet Rodríguez
+ * @author Jafet Rodríguez, with Claude (Anthropic)
  */
 public abstract class Object3D implements IIntersectable{
     private Color color;
     private Vector3D position;
+    private String name;
+    private Material material = new Material();
 
 
     /**
@@ -27,6 +29,25 @@ public abstract class Object3D implements IIntersectable{
     public Object3D(Vector3D position, Color color) {
         setPosition(position);
         setColor(color);
+        setName(getClass().getSimpleName());
+    }
+
+    /**
+     * Gets the display name used by the scene editor (defaults to the simple class name).
+     *
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Sets the display name used by the scene editor.
+     *
+     * @param name the name
+     */
+    public void setName(String name) {
+        this.name = name;
     }
 
 
@@ -44,7 +65,7 @@ public abstract class Object3D implements IIntersectable{
      *
      * @param color the color
      */
-    protected void setColor(Color color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
@@ -58,12 +79,31 @@ public abstract class Object3D implements IIntersectable{
     }
 
     /**
-     * Sets position.
+     * Sets position. Subclasses whose geometry is baked in world space at load time
+     * (e.g. {@link Model3D}) override this to keep their geometry in sync.
      *
-     * @return the position
+     * @param position the position
      */
-    private void setPosition(Vector3D position) {
+    public void setPosition(Vector3D position) {
         this.position = position;
+    }
+
+    /**
+     * Gets how this object's surface reacts to light — see {@link Material}.
+     *
+     * @return the material
+     */
+    public Material getMaterial() {
+        return material;
+    }
+
+    /**
+     * Sets the object's material.
+     *
+     * @param material the material
+     */
+    public void setMaterial(Material material) {
+        this.material = material;
     }
 
 }

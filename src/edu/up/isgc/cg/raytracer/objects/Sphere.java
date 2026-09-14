@@ -17,17 +17,40 @@ import static edu.up.isgc.cg.raytracer.math.Vector3D.*;
 /**
  * The type Sphere.
  *
- * @author Jafet Rodríguez
+ * @author Jafet Rodríguez, with Claude (Anthropic)
  */
 public class Sphere extends Object3D{
+    private double baseRadius;
+    private double scale = 1.0;
     private double radius;
 
-    private double getRadius() {
+    /**
+     * Gets radius (needed by the scene editor to draw the sphere, not just to intersect it).
+     *
+     * @return the radius
+     */
+    public double getRadius() {
         return radius;
     }
 
-    private void setRadius(double radius) {
-        this.radius = radius;
+    /**
+     * Gets the sphere's uniform scale (1.0 = its original radius).
+     *
+     * @return the scale
+     */
+    public double getScale() {
+        return scale;
+    }
+
+    /**
+     * Sets the sphere's uniform scale — a sphere has no separate "rotation" or "mesh"
+     * to transform, so scaling it is just multiplying its original radius.
+     *
+     * @param scale the scale
+     */
+    public void setScale(double scale) {
+        this.scale = scale;
+        this.radius = baseRadius * scale;
     }
 
     /**
@@ -39,7 +62,8 @@ public class Sphere extends Object3D{
      */
     public Sphere(Vector3D position, double radius, Color color) {
         super(position, color);
-        setRadius(radius);
+        this.baseRadius = radius;
+        setScale(1.0);
     }
 
     /**

@@ -1,0 +1,174 @@
+{
+  "projectName": "Untitled Scene",
+  "objects": [
+    {
+      "name": "Model3D",
+      "position": [
+        0.0,
+        0.8585858585858586,
+        0.40404040404040403
+      ],
+      "color": [
+        210,
+        210,
+        215
+      ],
+      "type": "Model3D",
+      "source": "OBJS\\Car.obj",
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": {
+        "ambient": 0.3,
+        "diffuse": 0.1,
+        "specular": 1.4,
+        "shininess": 120.0,
+        "reflectivity": 0.0,
+        "transparency": 0.0,
+        "refractiveIndex": 1.5
+      }
+    },
+    {
+      "name": "Plane",
+      "position": [
+        0.0,
+        0.07589038392945228,
+        0.0
+      ],
+      "color": [
+        0,
+        0,
+        153
+      ],
+      "type": "Plane",
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": {
+        "ambient": 0.3,
+        "diffuse": 0.1,
+        "specular": 1.4,
+        "shininess": 120.0,
+        "reflectivity": 0.0,
+        "transparency": 0.0,
+        "refractiveIndex": 1.5
+      }
+    }
+  ],
+  "cameras": [
+    {
+      "name": "FisheyeCamera",
+      "position": [
+        0.0,
+        1.9375346249876675,
+        17.98602493758016
+      ],
+      "yawDegrees": 180.0,
+      "pitchDegrees": 0.0,
+      "nearPlane": 0.1,
+      "farPlane": 400.0,
+      "type": "Fisheye",
+      "fovDegrees": 180.0
+    }
+  ],
+  "lights": [
+    {
+      "name": "SpotLight",
+      "color": [
+        255,
+        255,
+        255
+      ],
+      "intensity": 15.0,
+      "type": "Spot",
+      "position": [
+        0.0,
+        6.564518209897623,
+        2.124930750024664
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "coneAngleDegrees": 30.0,
+      "penumbraDegrees": 7.5
+    }
+  ],
+  "activeCameraIndex": 0,
+  "animation": {
+    "durationSeconds": 5.0,
+    "fps": 24,
+    "tracks": [
+      {
+        "targetType": "object",
+        "targetIndex": 0,
+        "keyframes": [
+          {
+            "time": 0.0,
+            "position": [
+              0.0,
+              0.8585858585858586,
+              0.40404040404040403
+            ],
+            "color": [
+              210,
+              210,
+              215
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": 1.0
+          },
+          {
+            "time": 0.9,
+            "position": [
+              0.0,
+              2.94,
+              0.66
+            ],
+            "color": [
+              210,
+              210,
+              215
+            ],
+            "rotation": [
+              0.0,
+              45.0,
+              0.0
+            ],
+            "scale": 1.0
+          },
+          {
+            "time": 2.0,
+            "position": [
+              0.0,
+              5.487899278282448,
+              0.9732182835112961
+            ],
+            "color": [
+              210,
+              210,
+              215
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": 1.0
+          }
+        ]
+      }
+    ]
+  }
+}

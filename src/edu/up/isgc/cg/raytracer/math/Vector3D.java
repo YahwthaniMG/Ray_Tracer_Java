@@ -9,7 +9,7 @@ import static java.lang.Math.*;
 /**
  * The type Vector 3 d.
  *
- * @author Jafet Rodríguez
+ * @author Jafet Rodríguez, with Claude (Anthropic)
  */
 public class Vector3D {
 
@@ -154,6 +154,25 @@ public class Vector3D {
     }
 
     /**
+     * Two unit vectors perpendicular to {@code normal} and to each other — a local 2D
+     * basis for the plane normal to it. Used wherever something needs to be jittered or
+     * tessellated across a surface/disk facing a given direction (soft shadow sampling
+     * over a light's assumed small surface, tessellating a {@code Plane} for the editor
+     * viewport) without caring which way "up" is within that plane. Picks whichever world
+     * axis is least parallel to {@code normal} as a reference so the cross products stay
+     * well-defined even when {@code normal} is nearly vertical.
+     *
+     * @param normal the normal
+     * @return {tangent1, tangent2}
+     */
+    public static Vector3D[] perpendicularTangents(Vector3D normal) {
+        Vector3D reference = Math.abs(normal.getY()) > 0.9 ? new Vector3D(1, 0, 0) : new Vector3D(0, 1, 0);
+        Vector3D tangent1 = normalize(crossProduct(reference, normal));
+        Vector3D tangent2 = crossProduct(normal, tangent1);
+        return new Vector3D[]{tangent1, tangent2};
+    }
+
+    /**
      * Add vector 3 d.
      *
      * @param vectorA the vector a
@@ -252,7 +271,7 @@ public class Vector3D {
         double [] vector1={x1,y1,z1};
 
         rotationMatrix[0][0] = Math.cos(y) * Math.cos(z);
-        rotationMatrix[0][1] = -Math.cos(y) * Math.sin(y);
+        rotationMatrix[0][1] = -Math.cos(y) * Math.sin(z);
         rotationMatrix[0][2] = Math.sin(y);
         rotationMatrix[1][0] = Math.cos(x) * Math.sin(z) + Math.sin(x) * Math.sin(y) * Math.cos(z);
         rotationMatrix[1][1] = Math.cos(x) * Math.cos(z) - Math.sin(x) * Math.sin(y) * Math.sin(z);

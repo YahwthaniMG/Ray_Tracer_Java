@@ -10,7 +10,7 @@ import edu.up.isgc.cg.raytracer.math.Ray;
 /**
  * The interface Intersectable.
  *
- * @author Jafet Rodríguez
+ * @author Jafet RodrÃ­guez, with Claude (Anthropic)
  */
 public interface IIntersectable {
     /**

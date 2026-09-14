@@ -23,7 +23,7 @@ import static edu.up.isgc.cg.raytracer.math.Vector3D.scalarMultiplication;
 /**
  * The type Obj reader.
  *
- * @author Jafet Rodríguez and Yahwthani Morales
+ * @author Jafet Rodríguez and Yahwthani Morales, with Claude (Anthropic)
  */
 public abstract class OBJReader {
 
@@ -179,7 +179,9 @@ public abstract class OBJReader {
                 }
             }
 
-            return new Model3D(position, color, triangles);
+            Model3D model = new Model3D(position, color, triangles);
+            model.setSource(path);
+            return model;
         } catch (FileNotFoundException ex) {
             System.err.println("File not found");
         } catch (IOException ex) {

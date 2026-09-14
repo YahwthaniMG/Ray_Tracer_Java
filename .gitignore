@@ -1,0 +1,11 @@
+/bin/
+/out/
+*.class
+
+.idea/
+*.iws
+*.iml.bak
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
