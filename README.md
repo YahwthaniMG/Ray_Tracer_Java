@@ -8,6 +8,12 @@ as an animated sequence exported to video) instead of hand-writing scene setup c
 Made for **UP** (Universidad Panamericana) as a Computer Graphics course project, and
 extended well past the original assignment as an ongoing personal/portfolio project.
 
+![The camera orbiting a scene with a mirror, a glass, and a matte sphere, rendered by the engine](docs/media/animation-orbit.gif)
+
+*A scene animated on the editor's timeline (camera orbit) and rendered frame-by-frame by
+the engine above — reflection, refraction, soft shadows and multiple light types, all in
+one shot.*
+
 ## Why this project exists
 
 The starting point was a typical computer-graphics course assignment: implement a
@@ -16,6 +22,11 @@ Phong shading, recursive reflection/refraction) with every scene hand-written in
 code and every render kicked off from a menu-driven console dialog. That original engine
 is still in here, working, and untouched in spirit (`Raytracer.java`, `RenderController`'s
 core shading math, `Sphere`/`Plane`/`Model3D`/`Triangle`, the camera and light hierarchy).
+
+<p align="center">
+  <img src="docs/media/original-coursework-render.png" alt="One of the original coursework renders: a rowboat and a dolphin over reflective water at night, hand-written in code with the legacy Raytracer entry point" width="70%">
+</p>
+<p align="center"><em>One of the original coursework renders — a hand-written scene, no editor involved.</em></p>
 
 What changed is everything *around* it: instead of describing a scene in code and
 re-running the program to see it, the project grew a real scene editor — place objects,
@@ -29,6 +40,12 @@ math, the shading model, the performance) while making it actually pleasant to *
 
 **The scene editor (recommended)** — `edu.up.isgc.cg.raytracer.ui.RayTracerApp`. A GUI:
 build a scene visually, preview it, animate it, render it.
+
+![The scene editor: sidebar palette, viewport with a selected mirror sphere, Inspector showing its Material section, and a timeline with three keyframes](docs/media/editor-screenshot.png)
+
+*Sidebar palette on the left, a live software-rasterized preview in the viewport, the
+Inspector on the right editing the selected sphere's material, and a timeline with three
+keyframes already set at the bottom.*
 
 **The legacy batch renderer** — `edu.up.isgc.cg.raytracer.Raytracer`. The original,
 dialog-driven flow: a couple of `JOptionPane` prompts pick a hard-coded demo scene and a
@@ -58,6 +75,17 @@ java -cp out/classes edu.up.isgc.cg.raytracer.Raytracer
 ```
 
 ## Features
+
+<p align="center">
+  <img src="docs/media/render-showcase.png" alt="Mirror, glass and matte spheres with a procedural pyramid, rendered with reflection, refraction, soft shadows and two lights" width="70%">
+</p>
+<p align="center">
+  <img src="docs/media/render-fisheye.png" alt="The same scene viewed through a fisheye camera, showing the characteristic wide-angle barrel distortion" width="45%">
+</p>
+
+*Same scene, two cameras: a per-material mix of a mirror, a glass and a matte sphere
+under a point light and a colored spot light (top), and the same shot through the
+fisheye camera (bottom) — note the curved horizon.*
 
 ### Rendering engine
 
@@ -133,7 +161,7 @@ without those three unrelated hierarchies needing to share a common base type.
 Other top-level folders: `OBJS/` (importable `.obj` models), `Scenes/` (saved scene JSON),
 `Renders/` (rendered output), `UML/` (a UML diagram of the original engine — predates the
 editor/animation system, so it covers the core ray tracer, not the `ui`/`animation`
-packages).
+packages), `docs/media/` (the screenshots/GIF embedded in this README).
 
 ## Development process
 
